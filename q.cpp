@@ -123,3 +123,50 @@ int main () {
 
     return 0;
 }
+
+void insert_node(Node *node1, int data) {
+        Node *node = new Node(data);
+        if (node1 == tail) 
+            push_back(data);
+        else {
+            Node *node2 = node1->next;
+            node1->next = node;
+            node->prev = node1;
+            node->next = node2;
+            node2->prev = node;
+
+
+    Node* find_node(int data) {
+        Node *node = front;
+        while (node != NULL) {
+            if (node->data == data)
+                return node;
+            node = node->next; 
+
+    void pop_back() {
+        if (tail != NULL) {
+            tail = tail->prev;          
+            
+    void pop_front() {
+        if (front != NULL) {
+            front = front->next;           
+            
+
+    void push_front(int data) {            
+            front->prev = node;
+            node->next = front;
+            front = node;            
+
+    void push_back(int data) {
+            node->prev = tail;
+            tail->next = node;
+            tail = node;            
+
+function GCD(a, b)
+    while b ≠ 0 do
+        temp ← b
+        b ← a mod b
+        a ← temp
+    end while
+    return a
+end function
